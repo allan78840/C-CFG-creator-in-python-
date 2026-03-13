@@ -66,8 +66,7 @@ class AnalyseurSyntaxique:
             return Position(self.jeton_actuel.ligne, self.jeton_actuel.colonne)
         return Position(0, 0)
     
-    # ================ PARSING PRINCIPAL ================
-    
+    # PARSING PRINCIPAL 
     def analyser_programme(self) -> Programme:
         """Analyser un programme C complet"""
         fonctions = []
@@ -138,7 +137,7 @@ class AnalyseurSyntaxique:
         else:
             raise ErreurAnalyseurSyntaxique("Type attendu", self.jeton_actuel)
     
-    # ================ STATEMENTS ================
+    # STATEMENTS 
     
     def analyser_instruction(self) -> Instruction:
         """Analyser une instruction"""
@@ -328,8 +327,7 @@ class AnalyseurSyntaxique:
             instruction_expression.pos = pos
             return instruction_expression
     
-    # ================ EXPRESSIONS ================
-    
+    # EXPRESSIONS 
     def analyser_expression(self) -> Expression:
         """Analyser une expression (niveau le plus bas: OR)"""
         return self.analyser_expression_ou()

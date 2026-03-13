@@ -1,0 +1,2 @@
+# Ce projet n'a aucune dépendance externe
+# Python 3.7+ requis seulement

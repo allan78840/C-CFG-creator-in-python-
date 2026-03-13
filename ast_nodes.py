@@ -47,7 +47,6 @@ class Position:
     def __str__(self):
         return f"{self.ligne}:{self.colonne}"
 
-# ============ EXPRESSIONS ============
 
 class Expression:
     """Classe de base pour toutes les expressions"""
@@ -109,7 +108,7 @@ class AccesTableau(Expression):
     tableau: Expression
     indice: Expression
 
-# ============ STATEMENTS ============
+
 
 class Instruction:
     """Classe de base pour toutes les instructions"""
